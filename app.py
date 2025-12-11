@@ -7,7 +7,7 @@ from openai import AzureOpenAI
 # CONFIG CLIENTE
 # --------------------------
 
- client = AzureOpenAI(
+client = AzureOpenAI(
     api_key=os.environ.get("AZURE_OPENAI_API_KEY"),
     api_version="2024-08-01-preview",
     azure_endpoint=os.environ.get("AZURE_OPENAI_ENDPOINT")
@@ -212,4 +212,5 @@ if st.session_state.df_sql_editado is not None:
 
     st.success(f"✅ Clasificados {len(st.session_state.df_sql_editado)} productos")
     st.info(f"⏱️ Tiempo total: {st.session_state.tiempo_total} segundos")
+
 
