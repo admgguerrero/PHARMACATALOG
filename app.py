@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import re, json, time
 from openai import AzureOpenAI
-
+import os
 # --------------------------
 # CONFIG CLIENTE
 # --------------------------
@@ -212,5 +212,6 @@ if st.session_state.df_sql_editado is not None:
 
     st.success(f"✅ Clasificados {len(st.session_state.df_sql_editado)} productos")
     st.info(f"⏱️ Tiempo total: {st.session_state.tiempo_total} segundos")
+
 
 
